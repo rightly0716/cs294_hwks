@@ -12,7 +12,6 @@ import os
 import time
 import inspect
 from multiprocessing import Process
-import pdb
 
 tf.logging.set_verbosity(tf.logging.ERROR)
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
@@ -401,8 +400,22 @@ class Agent(object):
             feed_dict={self.sy_ob_no: ob_no, self.sy_ac_na: ac_na, self.sy_adv_n: adv_n})
 
 
-def train_AC(exp_name, env_name, n_iter, gamma, min_timesteps_per_batch, max_path_length, learning_rate, num_target_updates, 
-        num_grad_steps_per_target_update, animate, logdir, normalize_advantages, seed, n_layers, size):
+def train_AC(
+        exp_name,
+        env_name,
+        n_iter, 
+        gamma, 
+        min_timesteps_per_batch, 
+        max_path_length,
+        learning_rate,
+        num_target_updates,
+        num_grad_steps_per_target_update,
+        animate, 
+        logdir, 
+        normalize_advantages,
+        seed,
+        n_layers,
+        size):
 
     start = time.time()
 
@@ -531,6 +544,7 @@ def main():
     parser.add_argument('--size', '-s', type=int, default=64)
     parser.add_argument('--gpu', type=int, default=0)
     args = parser.parse_args()
+    
     os.environ["CUDA_VISIBLE_DEVICES"] = str(args.gpu)
     
     data_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'data')
@@ -548,14 +562,13 @@ def main():
 
     processes = []
 
-    # pdb.set_trace()
-
     for e in range(args.n_experiments):
         seed = args.seed + 10*e
         print('Running experiment with seed %d'%seed)
 
         def train_func():
-            train_AC(exp_name=args.exp_name,
+            train_AC(
+                exp_name=args.exp_name,
                 env_name=args.env_name,
                 n_iter=args.n_iter,
                 gamma=args.discount,
@@ -569,13 +582,13 @@ def main():
                 normalize_advantages=not(args.dont_normalize_advantages),
                 seed=seed,
                 n_layers=args.n_layers,
-                size=args.size)
+                size=args.size
+                )
         # # Awkward hacky process runs, because Tensorflow does not like
         # # repeatedly calling train_AC in the same thread.
-        train_func()
-        #p = Process(target=train_func, args=tuple())
-        #p.start()
-        #processes.append(p)
+        p = Process(target=train_func, args=tuple())
+        p.start()
+        processes.append(p)
         # if you comment in the line below, then the loop will block 
         # until this process finishes
         # p.join()

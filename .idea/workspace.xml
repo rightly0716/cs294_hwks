@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0bedef40-7396-4769-953a-1d7475eeac74" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/hw3/data/ac_100_1_CartPole-v0/1/log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hw3/data/ac_100_1_CartPole-v0/1/params.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hw3/data/ac_100_1_CartPole-v0/11/log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hw3/data/ac_100_1_CartPole-v0/11/params.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hw3/data/ac_100_1_CartPole-v0/21/log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hw3/data/ac_100_1_CartPole-v0/21/params.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hw3/data/ac_10_10_CartPole-v0/1/log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hw3/data/ac_10_10_CartPole-v0/1/params.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hw3/data/ac_10_10_CartPole-v0/11/log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hw3/data/ac_10_10_CartPole-v0/11/params.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hw3/data/ac_10_10_CartPole-v0/21/log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hw3/data/ac_10_10_CartPole-v0/21/params.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hw3/data/ac_1_100_CartPole-v0/1/log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hw3/data/ac_1_100_CartPole-v0/1/params.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hw3/data/ac_1_100_CartPole-v0/11/log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hw3/data/ac_1_100_CartPole-v0/11/params.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hw3/data/ac_1_100_CartPole-v0/21/log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hw3/data/ac_1_100_CartPole-v0/21/params.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hw3/data/ac_1_1_CartPole-v0/1/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/hw3/data/ac_1_1_CartPole-v0/1/log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hw3/data/ac_1_1_CartPole-v0/1/params.json" beforeDir="false" afterPath="$PROJECT_DIR$/hw3/data/ac_1_1_CartPole-v0/1/params.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hw3/data/ac_1_1_CartPole-v0/11/log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hw3/data/ac_1_1_CartPole-v0/11/params.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hw3/data/ac_1_1_CartPole-v0/21/log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hw3/data/ac_1_1_CartPole-v0/21/params.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hw3/train_ac_f18.py" beforeDir="false" afterPath="$PROJECT_DIR$/hw3/train_ac_f18.py" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/hw3/train_ac_f18.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="431">
+              <caret line="574" column="20" lean-forward="true" selection-start-line="574" selection-start-column="20" selection-end-line="574" selection-end-column="20" />
+              <folding>
+                <element signature="e#238#256#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hw3/test_tmp.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="182">
+              <caret line="14" column="17" lean-forward="true" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hw3/run_21.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="39">
+              <caret line="3" column="33" lean-forward="true" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>CartPole-v0</find>
+      <find>main</find>
+      <find>env_name</find>
+      <find>gpu</find>
+      <find>print</find>
+      <find>n_exp</find>
+      <find>Process</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="C:/ProgramData/Miniconda3/Lib/ssl.py" />
+        <option value="$PROJECT_DIR$/hw3/test_tmp.py" />
+        <option value="$PROJECT_DIR$/hw3/train_ac_f18.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="133" />
+    <option name="y" value="13" />
+    <option name="width" value="1518" />
+    <option name="height" value="1392" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="Scope" currentSubView="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="cs294_hwks" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
+            <path>
+              <item name="cs294_hwks" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="hw3" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="cs294_hwks" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="hw3" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="results" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="ProjectPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/hw3" />
+    <property name="settings.editor.selected.configurable" value="PyConsoleConfigurable.Python Console" />
+  </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <console-settings module-name="cs294_hwks" is-module-sdk="true" working-directory="$PROJECT_DIR$/hw3">
+        <option name="myUseModuleSdk" value="true" />
+        <option name="myModuleName" value="cs294_hwks" />
+        <option name="myWorkingDirectory" value="$PROJECT_DIR$/hw3" />
+      </console-settings>
+    </option>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0bedef40-7396-4769-953a-1d7475eeac74" name="Default Changelist" comment="" />
+      <created>1562817501590</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1562817501590</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1721" height="935" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12604043" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32958803" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32958803" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.2721598" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.30836454" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/hw3/results/p11.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://C:/ProgramData/Miniconda3/Lib/ssl.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="1281" lean-forward="true" selection-start-line="1281" selection-end-line="1281" />
+          <folding>
+            <element signature="e#2919#2929#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/3/multiprocessing/__init__.pyi">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="56" column="8" selection-start-line="56" selection-start-column="8" selection-end-line="56" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hw3/test_tmp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="14" column="17" lean-forward="true" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hw3/run_21.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="39">
+          <caret line="3" column="33" lean-forward="true" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hw3/train_ac_f18.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="431">
+          <caret line="574" column="20" lean-forward="true" selection-start-line="574" selection-start-column="20" selection-end-line="574" selection-end-column="20" />
+          <folding>
+            <element signature="e#238#256#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
