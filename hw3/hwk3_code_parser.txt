@@ -1,0 +1,118 @@
+agent.__dict__
+{'ob_dim': 4, 'ac_dim': 2, 'discrete': True, 'size': 64, 'n_layers': 2, 'learning_rate': 0.005, 'num_targ
+et_updates': 1, 'num_grad_steps_per_target_update': 1, 'animate': False, 'max_path_length': 200, 'min_tim
+esteps_per_batch': 1000, 'gamma': 1.0, 'normalize_advantages': True, 'sy_ob_no': <tf.Tensor 'ob:0' shape=
+(?, 4) dtype=float32>, 'sy_ac_na': <tf.Tensor 'ac:0' shape=(?,) dtype=int32>, 'sy_adv_n': <tf.Tensor 'adv
+:0' shape=(?,) dtype=float32>, 'policy_parameters': <tf.Tensor 'policy_mlp/output/BiasAdd:0' shape=(?, 2)
+ dtype=float32>, 'sy_sampled_ac': <tf.Tensor 'Squeeze:0' shape=(?,) dtype=int64>, 'sy_logprob_n': <tf.Ten
+sor 'Neg:0' shape=(?,) dtype=float32>, 'actor_update_op': <tf.Operation 'Adam' type=NoOp>, 'critic_predic
+tion': <tf.Tensor 'Squeeze_1:0' shape=<unknown> dtype=float32>, 'sy_target_n': <tf.Tensor 'critic_target:
+0' shape=(?,) dtype=float32>, 'critic_loss': <tf.Tensor 'mean_squared_error/value:0' shape=() dtype=float
+32>, 'critic_update_op': <tf.Operation 'Adam_1' type=NoOp>, 'sess': <tensorflow.python.client.session.Ses
+sion object at 0x0000011475BFECC0>}
+
+
+def sample_trajectory(self, env, animate_this_episode):
+
+# paths[1] # len=19, len(paths)=67, sum of all paths: 1002
+# action: 0 or 1, rewards: 0 or 1
+# end with state (s1, a1, r1, ... , s10, a10, r10, s11)
+obs, acs, rewards, next_obs, terminals = [], [], [], [], []
+{'observation': array([[ 2.7252164e-02, -4.4817209e-02, -4.3047380e-02,  1.5175123e-03],
+       [ 2.6355820e-02, -2.3929621e-01, -4.3017030e-02,  2.8031373e-01],
+       [ 2.1569895e-02, -4.3377897e-01, -3.7410755e-02,  5.5912489e-01],
+       [ 1.2894316e-02, -6.2835640e-01, -2.6228257e-02,  8.3979064e-01],
+       [ 3.2718797e-04, -4.3288633e-01, -9.4324434e-03,  5.3897619e-01],
+       [-8.3305389e-03, -2.3763306e-01,  1.3470800e-03,  2.4333619e-01],
+       [-1.3083200e-02, -4.3277425e-01,  6.2138038e-03,  5.3644371e-01],
+       [-2.1738686e-02, -2.3774020e-01,  1.6942678e-02,  2.4572517e-01],
+       [-2.6493490e-02, -4.2864282e-02,  2.1857182e-02, -4.1565854e-02],
+       [-2.7350774e-02, -2.3829272e-01,  2.1025864e-02,  2.5793231e-01],
+       [-3.2116629e-02, -4.3370846e-01,  2.6184510e-02,  5.5717224e-01],
+       [-4.0790800e-02, -6.2918800e-01,  3.7327956e-02,  8.5798842e-01],
+       [-5.3374559e-02, -4.3459395e-01,  5.4487724e-02,  5.7727253e-01],
+       [-6.2066436e-02, -6.3043559e-01,  6.6033177e-02,  8.8661045e-01],
+       [-7.4675150e-02, -4.3626913e-01,  8.3765380e-02,  6.1539519e-01],
+       [-8.3400533e-02, -6.3245541e-01,  9.6073285e-02,  9.3324101e-01],
+       [-9.6049637e-02, -8.2873303e-01,  1.1473811e-01,  1.2545019e+00],
+       [-1.1262430e-01, -1.0251219e+00,  1.3982815e-01,  1.5808074e+00],
+       [-1.3312674e-01, -1.2216042e+00,  1.7144430e-01,  1.9136298e+00]],
+      dtype=float32), 
+'reward': array([1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1.], dtype=float32), 'action': array([0., 0., 0., 1., 1., 0., 1., 1., 0., 0., 0., 1., 0., 1.,
+0., 0., 0., 0., 1.], dtype=float32), 
+'next_observation': array([[ 2.6355820e-02, -2.3929621e-01, -4.3017030e-0
+2,  2.8031373e-01],
+       [ 2.1569895e-02, -4.3377897e-01, -3.7410755e-02,  5.5912489e-01],
+       [ 1.2894316e-02, -6.2835640e-01, -2.6228257e-02,  8.3979064e-01],
+       [ 3.2718797e-04, -4.3288633e-01, -9.4324434e-03,  5.3897619e-01],
+       [-8.3305389e-03, -2.3763306e-01,  1.3470800e-03,  2.4333619e-01],
+       [-1.3083200e-02, -4.3277425e-01,  6.2138038e-03,  5.3644371e-01],
+       [-2.1738686e-02, -2.3774020e-01,  1.6942678e-02,  2.4572517e-01],
+       [-2.6493490e-02, -4.2864282e-02,  2.1857182e-02, -4.1565854e-02],
+       [-2.7350774e-02, -2.3829272e-01,  2.1025864e-02,  2.5793231e-01],
+       [-3.2116629e-02, -4.3370846e-01,  2.6184510e-02,  5.5717224e-01],
+       [-4.0790800e-02, -6.2918800e-01,  3.7327956e-02,  8.5798842e-01],
+       [-5.3374559e-02, -4.3459395e-01,  5.4487724e-02,  5.7727253e-01],
+       [-6.2066436e-02, -6.3043559e-01,  6.6033177e-02,  8.8661045e-01],
+       [-7.4675150e-02, -4.3626913e-01,  8.3765380e-02,  6.1539519e-01],
+       [-8.3400533e-02, -6.3245541e-01,  9.6073285e-02,  9.3324101e-01],
+       [-9.6049637e-02, -8.2873303e-01,  1.1473811e-01,  1.2545019e+00],
+       [-1.1262430e-01, -1.0251219e+00,  1.3982815e-01,  1.5808074e+00],
+       [-1.3312674e-01, -1.2216042e+00,  1.7144430e-01,  1.9136298e+00],
+       [-1.5755883e-01, -1.0286944e+00,  2.0971689e-01,  1.6786655e+00]],
+      dtype=float32), 
+'terminal': array([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+0., 0., 1.], dtype=float32)}
+
+
+# for itr in range(n_iter):
+
+# A: Generate a certain number of trajectories
+paths, timesteps_this_batch = agent.sample_trajectories(itr, env)
+# B: Use the 5 components to update critic, adv, and actor, in particular:
+
+# 1. update targets (call critic_prediction) for self.num_target_updates, and 
+# update gradients (critic_update_op) for self.num_target_updates*self.num_grad_steps_per_target_update
+# 1.1 use terminal as a trick
+# 1.2 critic model: [2 layers + 64 hidden size]
+agent.update_critic(ob_no, next_ob_no, re_n, terminal_n)
+
+# 2. update adv (call critic_prediction)
+# target: re_n + (1 - terminal_n) * self.gamma * next_v_n
+# adv_n: re_n + (1 - terminal_n) * self.gamma * next_v_n - v_n
+# 2.1 normalize adv
+adv_n = agent.estimate_advantage(ob_no, next_ob_no, re_n, terminal_n)
+
+# 3 update actor (call actor_update_op -- weighted likelihood based, see build_computation_graph for details)
+agent.update_actor(ob_no, ac_na, adv_n)
+
+# C: record the rewards, and the lengths of all paths, loop for niter
+# save for plotting:
+
+returns = [path["reward"].sum() for path in paths]
+ep_lengths = [pathlength(path) for path in paths]
+logz.log_tabular("Time", time.time() - start)
+logz.log_tabular("Iteration", itr)
+logz.log_tabular("AverageReturn", np.mean(returns))
+logz.log_tabular("StdReturn", np.std(returns))
+logz.log_tabular("MaxReturn", np.max(returns))
+...
+
+----------------------------------------
+|               Time |        3.19e+03 |
+|          Iteration |               0 |
+|      AverageReturn |              15 |
+|          StdReturn |            7.75 |
+|          MaxReturn |              63 |
+|          MinReturn |               9 |
+|          EpLenMean |              15 |
+|           EpLenStd |            7.75 |
+| TimestepsThisBatch |           1e+03 |
+|     TimestepsSoFar |           1e+03 |
+
+# Appendix: my case:
+python train_ac_f18.py CartPole-v0 -n 100 -b 1000 -e 3 --exp_name 1_100 -ntu 1 -ngsptu 100 -nt
+
+# converges slightly faster than: 
+
+python train_ac_f18.py CartPole-v0 -n 100 -b 1000 -e 3 --exp_name 100_1 -ntu 100 -ngsptu 1 -nt

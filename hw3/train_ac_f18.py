@@ -254,11 +254,11 @@ class Agent(object):
 
         # define the critic
         self.critic_prediction = tf.squeeze(build_mlp(
-                                self.sy_ob_no,
-                                1,
+                                self.sy_ob_no, # (batch_size, input_dim)
+                                1, # outputsize
                                 "nn_critic",
                                 n_layers=self.n_layers,
-                                size=self.size))
+                                size=self.size)) # hidden layer size
         self.sy_target_n = tf.placeholder(shape=[None], name="critic_target", dtype=tf.float32)
         self.critic_loss = tf.losses.mean_squared_error(self.sy_target_n, self.critic_prediction)
         self.critic_update_op = tf.train.AdamOptimizer(self.learning_rate).minimize(self.critic_loss)
@@ -580,8 +580,8 @@ def main():
         # until this process finishes
         # p.join()
 
-    for p in processes:
-        p.join()
+    #for p in processes:
+    #    p.join()
         
 
 if __name__ == "__main__":
